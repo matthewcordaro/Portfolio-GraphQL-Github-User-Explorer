@@ -34,7 +34,7 @@ const PopularRepos = ({ repositories }: { repositories: Repository[] }) => {
             tickMargin={10}
             tickFormatter={(value) => value.slice(0, 10)}
           />
-          <YAxis dataKey='stars' />
+          <YAxis dataKey='stars' allowDecimals={false} />
           <ChartTooltip content={<ChartTooltipContent />} />
           <Bar dataKey='stars' fill='var(--color-repo)' radius={4} />
         </BarChart>

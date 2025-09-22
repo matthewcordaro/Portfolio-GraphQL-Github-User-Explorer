@@ -35,7 +35,7 @@ const ForkedRepos = ({ repositories }: { repositories: Repository[] }) => {
             axisLine={false}
             tickFormatter={(value) => value.slice(0, 10)} // Truncate long repo names
           />
-          <YAxis dataKey='count' />
+          <YAxis dataKey='count' allowDecimals={false} />
           <ChartTooltip content={<ChartTooltipContent />} />
           <Bar dataKey='count' fill='var(--color-repo)' radius={4} />
         </BarChart>

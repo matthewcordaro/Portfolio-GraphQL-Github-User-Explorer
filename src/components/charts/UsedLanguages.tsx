@@ -26,7 +26,7 @@ const UsedLanguages = ({ repositories }: { repositories: Repository[] }) => {
         <BarChart accessibilityLayer data={data}>
           <CartesianGrid vertical={false} />
           <XAxis dataKey='language' tickLine={false} tickMargin={10} />
-          <YAxis dataKey='count' />
+          <YAxis dataKey='count' allowDecimals={false} />
           <ChartTooltip content={<ChartTooltipContent />} />
           <Bar dataKey='count' fill='var(--color-language)' radius={4} />
         </BarChart>
